@@ -28,6 +28,10 @@ exports.loginView=(req, res)=>{
   res.render('auth/login', {message: req.flash ('error')})
 }
 
+exports.profileView = (req, res) => {
+  res.render('private/profile')
+}
+
 exports.logout=(req, res)=>{
   req.logout()
   res.redirect('login')

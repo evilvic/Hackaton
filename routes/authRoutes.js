@@ -7,7 +7,8 @@ const {
   signupView,
   signup,
   loginView,
-  logout
+  logout,
+  profileView
 }=require('../controllers/authControllers')
 
 router
@@ -22,6 +23,7 @@ router
       failureFlash: true
     })
   )
+  .get('/profile', profileView)
 
 
 // GOOGLE
@@ -42,6 +44,9 @@ router
       failureRedirect: "/login"
     })
   )
+
 router.get('/logout', logout)
+
+
 
  module.exports = router

@@ -1,0 +1,26 @@
+{{!-- EMAIL, NAME, LASTNAME, USERNAME, PASSWORD, CONFIRMATION --}}
+
+<div>
+  <h2>signup</h2>
+  <form action="/signup" method="POST">
+
+    <label for="email">email</label>
+    <input type="email" name="email" placeholder="example@mail.com" required>
+    <label for="name">name</label>
+    <input type="text" name="name" placeholder="Edith" required>
+    <label for="text">lastname</label>
+    <input type="text" name="lastname" placeholder="Estrada" required>
+    <label for="username">username</label>
+    <input type="text" name="username" placeholder="username" required>
+    <label for="password">password</label>
+    <input type="password" name="password" placeholder="password" required>
+    <label for="confirmation">confirm password</label>
+    <input type="password" name="confirmation" placeholder="confirm password" required>
+
+    <button>create account</button>
+
+    <p>Do you already have an account?</p>
+    <a href="/login">login</a>
+    
+  </form>
+</div>

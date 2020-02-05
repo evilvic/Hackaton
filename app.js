@@ -9,9 +9,14 @@ const mongoose     = require('mongoose');
 const logger       = require('morgan');
 const path         = require('path');
 
+const session = require('express-session')
+const passport = require('./config/passport')
+const flash = require('connect-flash')
+
+
 
 mongoose
-  .connect('mongodb://localhost/hackaton', {useNewUrlParser: true})
+  .connect('mongodb://localhost/hackaton', {useNewUrlParser: true, useUnifiedTopology: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -29,6 +34,17 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(flash())
+app.use(
+  session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: true
+  })
+)
+
+app.use(passport.initialize())
+app.use(passport.session())
 
 // Express View engine setup
 
@@ -53,6 +69,8 @@ app.locals.title = 'Express - Generated with IronGenerator';
 
 const index = require('./routes/index');
 app.use('/', index);
+
+app.use('/', require('./routes/authRoutes'))
 
 
 module.exports = app;

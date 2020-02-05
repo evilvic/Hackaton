@@ -7,7 +7,8 @@ const userSchema = new Schema (
     name: String,
     lastName: String,
     googleID: String,
-    username: String 
+    username: String,
+    preferences: [String]
   }
 )
 userSchema.plugin(PLM,{usernameField: 'email'})

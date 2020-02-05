@@ -1,0 +1,22 @@
+<img src="{{image}}" alt="">
+<h3>{{name}}</h3>
+<p>{{placeType}}</p>
+<p>{{location.address}}</p>
+
+<div id='mapDetail' style='width: 400px; height: 300px;'></div>
+
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZXZpbHZpYyIsImEiOiJjazY4MnBiN3kwMG8xM21uemJvYndkZHJ3In0.Xd19YjoqqQOQa_3PPD62ug';
+  const map = new mapboxgl.Map({
+container: 'mapDetail',
+style: 'mapbox://styles/mapbox/streets-v11',
+zoom: 15,
+center: [ {{location.coordinates}} ]
+})
+
+new mapboxgl.Marker()
+            .setLngLat([ {{location.coordinates}} ])
+            .addTo(map)
+
+
+</script>

@@ -4,7 +4,7 @@
   font: 10px "Lucida Grande", Helvetica, Arial, sans-serif; }
 
 a {
-  color: #00B7FF; }
+  text-decoration: none; }
 
 .center {
   display: flex;
@@ -71,5 +71,35 @@ a {
 
 .black {
   color: black; }
+
+.carousel-indicators {
+  position: absolute;
+  top: 125%; }
+  .carousel-indicators li {
+    background-color: whitesmoke;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid grey; }
+  .carousel-indicators .active {
+    background-color: blue; }
+
+#index-container {
+  flex-direction: column;
+  justify-content: start;
+  padding-top: 25%; }
+  #index-container .button {
+    width: 100px;
+    height: 40px;
+    color: white;
+    background-color: blue;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    padding: 10px; }
+
+#login-logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 30px; }
 
 /*# sourceMappingURL=style.css.map */

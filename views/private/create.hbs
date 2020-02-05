@@ -1,0 +1,61 @@
+<section>
+  <h2>Add place</h2>
+  <form action="/create" method="POST">
+
+    <input name="name" type="text" placeholder="Place name" />
+    
+      <select name="placeType">
+        <option value="Restaurante">Restaurante</option>
+        <option value="Cafetería">Cafetería</option>
+        <option value="Bar">Bar</option>
+        <option value="Cine">Cine</option>
+        <option value="Museo">Museo</option>
+        <option value="Sitio_Histórico">Sitio Histórico</option>
+        <option value="Parque">Parque</option>
+        <option value="Gimnasio">Gimnasio</option>
+        <option value="Metro">Metro</option>
+        <option value="Metrobus">Metrobus</option>
+        <option value="Ecobici">Ecobici</option>
+        <option value="Estacionamiento">Estacionamiento</option>
+      </select>
+
+    <input name="image" type="text" placeholder="Image" />
+
+    <div id='map' style='width: 400px; height: 300px;'></div>
+    <button class="button">Create</button>
+    <input type="text" name="address" hidden>
+    <input type="text" name="latitude" hidden>
+    <input type="text" name="longitude" hidden>
+  </form>
+</section>
+
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZXZpbHZpYyIsImEiOiJjazY4MnBiN3kwMG8xM21uemJvYndkZHJ3In0.Xd19YjoqqQOQa_3PPD62ug';
+  const map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v11'
+})
+
+map.addControl(
+new MapboxGeocoder({
+accessToken: mapboxgl.accessToken,
+mapboxgl: mapboxgl,
+countries: 'mx'
+})
+);
+
+map.on('moveend', r => {
+  const { lng, lat } = map.getCenter()
+  if (lng !== 0 || lat !== 0) {
+    new mapboxgl.Marker().setLngLat([lng, lat]).addTo(map)
+    const address = document.querySelector('input[placeholder="Search"]').value
+    const addressInput = document.querySelector('input[name="address"]')
+    const latInput = document.querySelector('input[name="latitude"]')
+    const lngInput = document.querySelector('input[name="longitude"]')
+    latInput.value = lat
+    lngInput.value = lng
+    addressInput.value = address
+  }
+})
+
+</script>

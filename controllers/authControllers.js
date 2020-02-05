@@ -37,3 +37,7 @@ exports.logout=(req, res)=>{
   res.redirect('login')
 
 }
+
+exports.preferencesView = (req, res) =>{
+  res.render('private/preferences')
+}

@@ -8,7 +8,8 @@ const {
   signup,
   loginView,
   logout,
-  profileView
+  profileView,
+  preferencesView
 }=require('../controllers/authControllers')
 
 router
@@ -24,6 +25,7 @@ router
     })
   )
   .get('/profile', profileView)
+  .get('/preferences', preferencesView)
 
 
 // GOOGLE
@@ -40,7 +42,7 @@ router
   .get(
     "/auth/google/callback",
     passport.authenticate("google", {
-      successRedirect: "/profile",
+      successRedirect: "/preferences",
       failureRedirect: "/login"
     })
   )

@@ -32,7 +32,7 @@ a {
   i {
     width: 30px;
     height: 30px;
-    background-color: blue;
+    background-color: #3486BF;
     color: white;
     font-size: 1.5rem;
     border-radius: 5px 0 0 5px;
@@ -49,7 +49,7 @@ a {
   }
 
   .red {
-    background-color: red;
+    background-color: #118EE5;
   }
 
 }
@@ -77,7 +77,7 @@ a {
     padding: 10px;
     font-size: 1.3rem;
     color: white;
-    background-color: blue;
+    background-color: #3486BF;
     border-radius: 5px;
   }
 
@@ -109,7 +109,7 @@ a {
     border: 1px solid grey;
   }
   .active {
-    background-color: blue;
+    background-color: #3486BF;
   }
 }
 
@@ -122,7 +122,7 @@ a {
     width: 100px;
     height: 40px;
     color: white;
-    background-color: blue;
+    background-color: #3486BF;
     border-radius: 5px;
     font-size: 1.5rem;
     padding: 10px;
@@ -134,3 +134,44 @@ a {
   height: auto;
   margin-bottom: 30px;
 }
+
+.card-preferences{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color:#73b7e7;
+  height: 50px;
+  width: 160px;
+  margin: 20px 10px 20px 0;
+  padding: 5px;
+  img{
+    width: 35px;
+    height: auto;
+  }
+  p{
+    font-size: 1.1rem;
+  }
+  
+  
+}
+
+#cards{
+  flex-wrap: wrap;
+  button{
+    width: 160px;
+    height: 40px;
+    background-color: #3486BF;
+  }
+}
+
+#preferidos{
+  background-color: #3486BF;
+  text-align: center;
+  width: 100vw;
+  padding: 10px;
+  
+}
+.column{
+  flex-direction: column;
+}
+

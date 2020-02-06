@@ -1,0 +1,37 @@
+<div class="pos-f-t">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+      <h5 class="text-white h4">IRON PALS</h5>
+      
+    </div>
+  </div>
+  <nav class="navbar navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+</div>
+
+<h3>Tus sugerencias:</h3>
+
+<div class="container">
+
+
+{{#each placesArr}}
+
+<div class="card" >
+  <img src=" {{image}} " class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"> {{name}} </h5>
+    <h6>{{placeType}}</h6>
+    <p class="card-text">{{location.address}}</p>
+    <a href="/place/{{_id}}" class="btn btn-primary">Ver más</a>
+  </div>
+</div>
+
+{{/each}}
+
+</div>
+
+
+

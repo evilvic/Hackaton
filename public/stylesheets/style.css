@@ -26,7 +26,7 @@ a {
   .social i {
     width: 30px;
     height: 30px;
-    background-color: blue;
+    background-color: #3486BF;
     color: white;
     font-size: 1.5rem;
     border-radius: 5px 0 0 5px;
@@ -39,7 +39,7 @@ a {
     border-radius: 0 5px 5px 0;
     padding: 3px; }
   .social .red {
-    background-color: red; }
+    background-color: #118EE5; }
 
 #login {
   width: 230px;
@@ -61,7 +61,7 @@ a {
     padding: 10px;
     font-size: 1.3rem;
     color: white;
-    background-color: blue;
+    background-color: #3486BF;
     border-radius: 5px; }
   #login .small {
     width: 15px;
@@ -82,7 +82,7 @@ a {
     border-radius: 50%;
     border: 1px solid grey; }
   .carousel-indicators .active {
-    background-color: blue; }
+    background-color: #3486BF; }
 
 #index-container {
   flex-direction: column;
@@ -92,7 +92,7 @@ a {
     width: 100px;
     height: 40px;
     color: white;
-    background-color: blue;
+    background-color: #3486BF;
     border-radius: 5px;
     font-size: 1.5rem;
     padding: 10px; }
@@ -101,5 +101,36 @@ a {
   width: 150px;
   height: auto;
   margin-bottom: 30px; }
+
+.card-preferences {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #73b7e7;
+  height: 50px;
+  width: 160px;
+  margin: 20px 10px 20px 0;
+  padding: 5px; }
+  .card-preferences img {
+    width: 35px;
+    height: auto; }
+  .card-preferences p {
+    font-size: 1.1rem; }
+
+#cards {
+  flex-wrap: wrap; }
+  #cards button {
+    width: 160px;
+    height: 40px;
+    background-color: #3486BF; }
+
+#preferidos {
+  background-color: #3486BF;
+  text-align: center;
+  width: 100vw;
+  padding: 10px; }
+
+.column {
+  flex-direction: column; }
 
 /*# sourceMappingURL=style.css.map */

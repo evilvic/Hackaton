@@ -9,7 +9,9 @@ const {
   loginView,
   logout,
   profileView,
-  preferencesView
+  preferencesView,
+  suggestionsView,
+  suggestionsPost
 }=require('../controllers/authControllers')
 
 router
@@ -26,6 +28,8 @@ router
   )
   .get('/profile', profileView)
   .get('/preferences', preferencesView)
+  .get('/suggestions', suggestionsView)
+  .post('/suggestions', suggestionsPost)
 
 
 // GOOGLE

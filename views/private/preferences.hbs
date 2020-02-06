@@ -1,27 +1,90 @@
+
+
+<div class="container center column"> 
+
 <div>
-  <section>
-    <img src="" alt="">
-    <h3> Victor Gonzalez </h3>
-    <button>
-      logout
-    </button>
-  </section>
-  <section>
-    
-  </section>
+<h2 id="preferidos">
+  Selecciona tus preferidos
+</h2>
 </div>
 
-<div class="cards"> 
+<form id="cards" class="center" action="/suggestions" method="POST">
 
-<form action="/preferences" method="POST">
-  <div>
-    <img src="/images/iconos/food.png" alt="restaurant icon">
+  <div class="card-preferences">
+    <img src="/images/iconos/food.png" alt="restaurant_icon">
     <p>Restaurantes</p>
-    <input type="checkbox" class="small space">
+    <input type="checkbox" name="Restaurante" value="true"> 
 </div>
-<div>
 
+<div class="card-preferences">
+    <img src="/images/iconos/cafeteria.png" alt="cafeteria_icon">
+    <p>Cafeterías</p>
+    <input type="checkbox" name="Cafetería" value="true"> 
 </div>
+
+<div class="card-preferences">
+<img src="/images/iconos/beer.png" alt="beer_icon">
+<p>Bares</p>
+<input type="checkbox" name="Bar" value="true"> 
+</div>
+
+<div class="card-preferences">
+  <img src="/images/iconos/video-camera.png" alt="cinema_icon">
+  <p>Cines</p>
+  <input type="checkbox" name="Cine" value="true"> 
+</div>
+
+<div class="card-preferences">
+  <img src="/images/iconos/museum.png" alt="cinema_icon">
+  <p>Museos</p>
+  <input type="checkbox" name="Museo" value="true">
+</div>
+
+<div class="card-preferences">
+  <img src="/images/iconos/angel.png" alt="museum_icon">
+  <p>Sitios Históricos</p>
+  <input type="checkbox" name="Sitio_Histórico" value="true">
+</div>
+
+<div class="card-preferences">
+  <img src="/images/iconos/park.png" alt="park_icon">
+  <p>Parques</p>
+  <input type="checkbox" name="Parque" value="true">
+</div>
+
+<div class="card-preferences">
+  <img src="/images/iconos/gym.png" alt="gym_icon">
+  <p>Gimnasios</p>
+  <input type="checkbox" name="Gimnasio" value="true">
+</div>
+ 
+ <div class="card-preferences">
+  <img src="/images/iconos/metro.png" alt="metro_icon">
+  <p>Metro</p>
+  <input type="checkbox" name="Metro" value="true">
+ </div>
+
+ <div class="card-preferences">
+  <img src="/images/iconos/metrobus_mexico.png" alt="metrobus_icon">
+  <p>Metrobus</p>
+  <input type="checkbox" name="Metrobus" value="true">
+ </div>
+
+ <div class="card-preferences">
+  <img src="/images/iconos/logo-ecobici.png" alt="ecobici_icon">
+  <p>Ecobici</p>
+  <input type="checkbox" name="Ecobici" value="true">
+ </div>
+
+  <div class="card-preferences">
+  <img src="/images/iconos/parking.png" alt="parking_icon">
+  <p>Estacionamientos</p>
+  <input type="checkbox" name="Estacionamiento" value="true">
+ </div>
+
+<button>
+  Siguiente
+</button>
 
 </form>
 </div>
